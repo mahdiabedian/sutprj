@@ -21,7 +21,7 @@ while 1:
                     print(r[i][:-1], ': ', status)
                     data = {'from': '50004001339496', 'to': ['09223454335'], 'text': f'{r[i][:-1]} has problem\nstatus: {status}', 'udh': ''}
                     response = requests.post(
-                        'https://console.melipayamak.com/api/send/advanced/8993517da6314878802f92209e31de61', json=data)
+                        'https://console.melipayamak.com/api/send/advanced/yourmellipayamakapikey', json=data)
                     print(response.json())
             else:
                 status = req(r[i])
@@ -32,7 +32,7 @@ while 1:
                     data = {'from': '50004001339496', 'to': ['09223454335'],
                             'text': f'{r[i]} has problem\nstatus: {status}', 'udh': ''}
                     response = requests.post(
-                        'https://console.melipayamak.com/api/send/advanced/8993517da6314878802f92209e31de61', json=data)
+                        'https://console.melipayamak.com/api/send/advanced/yourmellipayamakapikey', json=data)
                     print(response.json())
     u.close()
     time.sleep(120)
